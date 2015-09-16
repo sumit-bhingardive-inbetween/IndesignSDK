@@ -1,0 +1,8 @@
+Deleted file - D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\(MyPlugin1.sdk Resources)\idrc_CLST\500.idrc
+Deleted file - D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\(MyPlugin1.sdk Resources)\idrc_CRCT\1.idrc
+Deleted file - D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\(MyPlugin1.sdk Resources)\idrc_FACT\550.idrc
+Deleted file - D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\(MyPlugin1.sdk Resources)\idrc_IDPL\1.idrc
+Deleted file - D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\(MyPlugin1.sdk Resources)\idrc_LOCR\300.idrc
+Deleted file - D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\(MyPlugin1.sdk Resources)\idrc_LOCR\350.idrc
+Deleted file - D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\(MyPlugin1.sdk Resources)\idrc_PMST\351.idrc
+Deleted file - D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\(MyPlugin1.sdk Resources)\idrc_PVER\450.idrc

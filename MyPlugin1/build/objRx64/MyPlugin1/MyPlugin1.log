@@ -1,0 +1,48 @@
+﻿Build started 9/16/2015 2:39:01 PM.
+     1>Project "D:\GitHubPersonal\IndesignSDK\MyPlugin1\MyPlugin1.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX /O2 /Ob2 /Oi /Ot /D _CRT_SECURE_NO_DEPRECATE /D STRICT /D NDEBUG /D _ITERATOR_DEBUG_LEVEL=0 /D _VC80_UPGRADE=0x0710 /D _SCL_SECURE_NO_DEPRECATE /D _CRT_SECURE_NO_DEPRECATE /D DVAUI_DATA_DELETER_PARAM_OPTIONAL=1 /D DVA_ENABLE_LEGACY_SKIN=1 /D DVA_ENABLE_AGM_DRAWBOT=0 /D DVA_ASL_SUPPORT=1 /D ID_DROVER_ENABLE=1 /D DVA_COCOA_UI=0 /D ID_COCOA_ENABLE=0 /D OWL_COCOA_ENABLE=0 /D UICANVAS_COCOA_ENABLE=0 /D OWL_TARGET_PLATFORM_ENABLE=1 /D BOOST_ALL_DYN_LINK /D BOOST_REGEX_USE_CPP_LOCALE /D BOOST_REGEX_NON_RECURSIVE /D BOOST_HAS_ICU=1 /D BOOST_FILESYSTEM_VERSION=3 /D BOOST_CHRONO_HEADER_ONLY /D BOOST_SIGNALS_NO_DEPRECATION_WARNING /D ID_NO_DIRECT_DRAWING_ALLOWED=1 /D DVA_USE_WIDECHAR_AS_UTF16CHAR_ON_WIN /D DVA_ENABLE_ACCESSIBILITY=0 /D DVA_MAC_COCOA_POPUPWINDOW_POST_RC_FIX=1 /D SC_NO_WIN_STDINT_H=1 /D U_HAVE_INT32_T=1 /D U_HAVE_UINT32_T=1 /D _WINDLL /GF /Gm- /EHsc /MD /GS- /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"VCPlugInHeaders.h" /Fp"D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\MyPlugin1.pch" /Fo"D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\\" /Fd"D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\vc120.pdb" /Gd /TP /errorReport:prompt /vmg @"MyPlugin1cpp.rsp" ..\..\..\plugin\source\precomp\msvc\VCPlugInHeaders.cpp
+         VCPlugInHeaders.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX /O2 /Ob2 /Oi /Ot /D _CRT_SECURE_NO_DEPRECATE /D STRICT /D NDEBUG /D _ITERATOR_DEBUG_LEVEL=0 /D _VC80_UPGRADE=0x0710 /D _SCL_SECURE_NO_DEPRECATE /D _CRT_SECURE_NO_DEPRECATE /D DVAUI_DATA_DELETER_PARAM_OPTIONAL=1 /D DVA_ENABLE_LEGACY_SKIN=1 /D DVA_ENABLE_AGM_DRAWBOT=0 /D DVA_ASL_SUPPORT=1 /D ID_DROVER_ENABLE=1 /D DVA_COCOA_UI=0 /D ID_COCOA_ENABLE=0 /D OWL_COCOA_ENABLE=0 /D UICANVAS_COCOA_ENABLE=0 /D OWL_TARGET_PLATFORM_ENABLE=1 /D BOOST_ALL_DYN_LINK /D BOOST_REGEX_USE_CPP_LOCALE /D BOOST_REGEX_NON_RECURSIVE /D BOOST_HAS_ICU=1 /D BOOST_FILESYSTEM_VERSION=3 /D BOOST_CHRONO_HEADER_ONLY /D BOOST_SIGNALS_NO_DEPRECATION_WARNING /D ID_NO_DIRECT_DRAWING_ALLOWED=1 /D DVA_USE_WIDECHAR_AS_UTF16CHAR_ON_WIN /D DVA_ENABLE_ACCESSIBILITY=0 /D DVA_MAC_COCOA_POPUPWINDOW_POST_RC_FIX=1 /D SC_NO_WIN_STDINT_H=1 /D U_HAVE_INT32_T=1 /D U_HAVE_UINT32_T=1 /D _WINDLL /GF /Gm- /EHsc /MD /GS- /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"VCPlugInHeaders.h" /Fp"D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\MyPlugin1.pch" /Fo"D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\\" /Fd"D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\vc120.pdb" /Gd /TP /errorReport:prompt /vmg @"MyPlugin1cpp.rsp" ..\..\..\plugin\source\public\libs\publiclib\statics\PlugInStatics.cpp ..\..\..\plugin\source\sdksamples\common\SDKPlugInEntrypoint.cpp D:\GitHubPersonal\IndesignSDK\MyPlugin1\source\MP1ID.cpp D:\GitHubPersonal\IndesignSDK\MyPlugin1\source\MP1NoStrip.cpp D:\GitHubPersonal\IndesignSDK\MyPlugin1\source\TriggerResourceDeps.cpp myStartUpShutdownServiceImpl.cpp
+         PlugInStatics.cpp
+         SDKPlugInEntrypoint.cpp
+         MP1ID.cpp
+         MP1NoStrip.cpp
+         TriggerResourceDeps.cpp
+         myStartUpShutdownServiceImpl.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _CRT_SECURE_NO_DEPRECATE /D _CRT_SECURE_NO_DEPRECATE /D NDEBUG /l"0x0809" /ID:\GitHubPersonal\IndesignSDK\MyPlugin1\header /ID:\GitHubPersonal\IndesignSDK\MyPlugin1\source /I..\..\..\plugin\source\precomp\msvc /I..\..\..\plugin\source\public\includes /I..\..\..\plugin\source\sdksamples\common /nologo /fo"D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\MP1.res" D:\GitHubPersonal\IndesignSDK\MyPlugin1\source\MP1.rc 
+       CustomBuild:
+         Performing Custom Build Tools
+         ODFRC deleting old resources... 
+       PreLinkEvent:
+         merge_res.cmd "D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\"  MP1 & echo Deleting old resources... & del /f /s "D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\(MyPlugin1.sdk Resources)\"*.idrc > D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\prevDeletedResources.txt &  xcopy /Q /E "D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\"*.idrc "D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\(MyPlugin1.sdk Resources)\" /Y
+         :VCEnd
+         merge_res.cmd - calling ConcatRes
+                 1 file(s) copied.
+         ConcatRes skipped since "D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1"\MP1.fres is an empty file.
+         merge_res.cmd done.
+         Deleting old resources... 
+         8 File(s) copied
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\MyPlugin1.sdk.pln" /INCREMENTAL:NO /NOLOGO /LIBPATH:D:\plugin\external\dva\third_party\boost_libraries\bin.v2\libs\boost_system\lib\win\release\64\boost_system.lib ..\..\..\plugin\build\win\objrx64\PMRuntime.lib ..\..\..\plugin\build\win\objrx64\Public.lib D:\plugin\external\dva\third_party\boost_libraries\bin.v2\libs\boost_system\lib\win\release\64\boost_system.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\MyPlugin1.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\..\build\win\objRx64\MyPlugin1/MyPlugin1.lib" /MACHINE:X64 /IGNORE:4089 /DLL D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\MP1.res
+         D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\PlugInStatics.obj
+         D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\SDKPlugInEntrypoint.obj
+         D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\MP1ID.obj
+         D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\MP1NoStrip.obj
+         D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\TriggerResourceDeps.obj
+         D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\VCPlugInHeaders.obj
+         D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\myStartUpShutdownServiceImpl.obj
+            Creating library ..\..\..\build\win\objRx64\MyPlugin1/MyPlugin1.lib and object ..\..\..\build\win\objRx64\MyPlugin1/MyPlugin1.exp
+         MyPlugin1.vcxproj -> D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\releasex64\MyPlugin1.sdk.pln
+       PostBuildEvent:
+         restore_res.cmd "D:\GitHubPersonal\IndesignSDK\MyPlugin1\build\objRx64\MyPlugin1\"  MP1
+         :VCEnd
+                 1 file(s) copied.
+         restore_res.cmd done.
+     1>Done Building Project "D:\GitHubPersonal\IndesignSDK\MyPlugin1\MyPlugin1.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.50
