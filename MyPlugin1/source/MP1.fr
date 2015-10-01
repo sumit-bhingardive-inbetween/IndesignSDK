@@ -84,6 +84,25 @@ resource ExtraPluginInfo(1)
  */
 resource ClassDescriptionTable(kSDKDefClassDescriptionTableResourceID)
 {{{
+Class 
+	{
+		kDocWchResponderServiceBoss,
+		kInvalidClass,
+		{
+			/** 
+			Identifies this boss as providing a responder service for 
+			multiple document actions, such as for doc open, close, etc. 
+			If only one service was needed, then we'd reuse an API-defined 
+			implementation ID listed in DocumentID.h.
+			*/
+			IID_IK2SERVICEPROVIDER,	kMyServiceProviderImpl,
+			/** 
+			Performs the responder service. This implementation delivers
+			every service promised by the IK2ServiceProvider implementation.
+			*/
+			IID_IRESPONDER,	kMyResponderImpl,
+		}
+	},
  Class
 	{
 	    kmyStartupShutdownBoss,

@@ -50,8 +50,8 @@ DECLARE_PMID(kPlugInIDSpace, kMP1PluginID, kMP1Prefix + 0)
 
 // ClassIDs:
 DECLARE_PMID(kClassIDSpace, kmyStartupShutdownBoss, kMP1Prefix + 3)
-//DECLARE_PMID(kClassIDSpace, kMP1Boss, kMP1Prefix + 4)
-//DECLARE_PMID(kClassIDSpace, kMP1Boss, kMP1Prefix + 5)
+DECLARE_PMID(kClassIDSpace, kDocWchResponderServiceBoss, kMP1Prefix + 4)
+//DECLARE_PMID(kClassIDSpace, kNewStorySignalMgrBoss, kMP1Prefix + 5)
 //DECLARE_PMID(kClassIDSpace, kMP1Boss, kMP1Prefix + 6)
 //DECLARE_PMID(kClassIDSpace, kMP1Boss, kMP1Prefix + 7)
 //DECLARE_PMID(kClassIDSpace, kMP1Boss, kMP1Prefix + 8)
@@ -131,6 +131,10 @@ DECLARE_PMID(kClassIDSpace, kmyStartupShutdownBoss, kMP1Prefix + 3)
 //DECLARE_PMID(kImplementationIDSpace, kMP1Impl, kMP1Prefix + 24)
 //DECLARE_PMID(kImplementationIDSpace, kMP1Impl, kMP1Prefix + 25)
 DECLARE_PMID(kImplementationIDSpace, kmyStartUpShutdownServiceImpl, kMP1Prefix + 26)
+DECLARE_PMID(kImplementationIDSpace, kMyResponderImpl, kMP1Prefix + 27)
+DECLARE_PMID(kImplementationIDSpace, kMyServiceProviderImpl, kMP1Prefix + 28)
+//DECLARE_PMID(kImplementationIDSpace, kMyResponderForCreateStoryImpl, kMP1Prefix + 29)
+
 
 
 // ActionIDs:

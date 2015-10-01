@@ -21,3 +21,6 @@
 //  
 //========================================================================================
 REGISTER_PMINTERFACE(myStartUpShutdownServiceImpl, kmyStartUpShutdownServiceImpl)
+REGISTER_PMINTERFACE(MyResponderImpl, kMyResponderImpl)
+REGISTER_PMINTERFACE(MyServiceProviderImpl, kMyServiceProviderImpl)
+//REGISTER_PMINTERFACE(MyResponderForCreateStoryImpl, kMyResponderForCreateStoryImpl)
