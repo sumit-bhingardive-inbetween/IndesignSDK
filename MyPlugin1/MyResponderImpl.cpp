@@ -115,6 +115,13 @@ void MyResponderImpl::Respond(ISignalMgr* signalMgr)
 		break;
 	}
 
+	case kBeforeSaveAsDocSignalResponderService:
+	{
+		CAlert::InformationAlert("hello....Before first time Saving Document");
+		handleMySaveEvent(signalMgr);
+		break;
+	}
+
 	default:
 		break;
 	}
@@ -209,6 +216,48 @@ handleDocSwitchEvent()  dispatches the CSXS event on saving a document
 bool MyResponderImpl::handleMySaveEvent(ISignalMgr* signalMgr)
 {
 	CAlert::InformationAlert("hello....Saving Document");
+
+	PMString docName;
+	InterfacePtr<IDocumentSignalData> documentSignalData(signalMgr, UseDefaultIID()); //Getting data from singnal manager 
+	ASSERT(documentSignalData != nil);
+	if (documentSignalData == nil)
+	{
+		return false;
+	}
+	UIDRef docUIDRef = documentSignalData->GetDocument();// Getting document reference Id.
+	InterfacePtr<IDocument> document(docUIDRef, UseDefaultIID()); // Getting document object using docuement reference Id.
+	if (!document)
+	{
+		return false;
+	}
+	else{
+		CAlert::InformationAlert("hello......Found Docuemnt object");
+	}
+	InterfacePtr<ISpreadList> spreadList(document, UseDefaultIID()); // Getting spreads list for the document.
+	IDataBase* database = docUIDRef.GetDataBase(); // Getting database object for the document. Database object contains information about doucument(eg. Number of spreads, number of pages, etc.)
+	int32 spreadCount = spreadList->GetSpreadCount(); 
+
+	for (int32 spreadIndex = 0; spreadIndex < spreadCount; spreadIndex++)
+	{
+		UIDRef spreadUIDRef(database, spreadList->GetNthSpreadUID(spreadIndex)); // Getting spreads reference Id.
+		InterfacePtr<ISpread> spread(spreadUIDRef, UseDefaultIID());
+		for (int32 pageIndex = 0; pageIndex < spread->GetNumPages(); pageIndex++)
+		{
+			UIDList itemsOnPage(database);
+			const bool16 bIncludePage = kFalse;
+			const bool16 bIncludePasteboard = kFalse;
+			spread->GetItemsOnPage(pageIndex, &itemsOnPage, bIncludePage,
+				bIncludePasteboard);
+			PMString str = "Number of Items ";
+			str.AppendNumber(itemsOnPage.Length());
+			CAlert::InformationAlert(str);
+			// Add code to manipulate itemsOnPage.
+		}
+	}
+
+	UID docUID = docUIDRef.GetUID();
+	document->GetName(docName);
+
 	return true;
 }
 

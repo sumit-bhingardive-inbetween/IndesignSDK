@@ -37,6 +37,7 @@ void MyServiceProviderImpl::addResponder()
 	fSupportedServiceIDs.push_back(kDocChangesSignalResponderService);
 	fSupportedServiceIDs.push_back(kBeforeSaveDocSignalResponderService);
 	fSupportedServiceIDs.push_back(kAfterSaveDocSignalResponderService);
+	fSupportedServiceIDs.push_back(kBeforeSaveAsDocSignalResponderService);
 
 
 
