@@ -257,21 +257,21 @@ bool MyResponderImpl::handleMySaveEvent(ISignalMgr* signalMgr)
 				PMString sFrameType = "Frame Type: ";
 				sFrameType.AppendNumber(iFrameType->IsTextFrame());
 				CAlert::InformationAlert(sFrameType);
-				UIDRef pageItemRef  =  itemsOnPage.GetRef(frameIndex);
-				IXMLReferenceData *xmlReferenceData = Utils<IXMLUtils>()->QueryXMLReferenceData(pageItemRef);
+				UIDRef pageItemRef  =  itemsOnPage.GetRef(frameIndex);//Geting page item reference ie frame reference
+				IXMLReferenceData *xmlReferenceData = Utils<IXMLUtils>()->QueryXMLReferenceData(pageItemRef);// geting referecne data
 				if (xmlReferenceData)
 				{
-					XMLReference ref = xmlReferenceData->GetReference();
-					InterfacePtr<IIDXMLElement> element(ref.Instantiate());
+					XMLReference ref = xmlReferenceData->GetReference();// Geting xmlReference of xmlReference data.
+					InterfacePtr<IIDXMLElement> element(ref.Instantiate());// Getting element which contains the reference of frame.
 					if (element != nil)
 					{
-						UID tagUID = element->GetTagUID();
+						UID tagUID = element->GetTagUID();// Uid of the frame from element.
 						WideString elementName = element->GetTagString();
 						PMString sFrameName = "TagName... ";
 						sFrameName.Append(elementName);
 						CAlert::InformationAlert(sFrameName);
 						for (int iTagElementCount = 0; iTagElementCount < element->GetChildCount(); iTagElementCount++)
-						{
+						{// Iterating through the nested in line tags ie child elements inside a frame.
 							XMLReference childRef = element->GetNthChild(iTagElementCount);
 							InterfacePtr<IIDXMLElement> childElement(childRef.Instantiate());
 							if (childElement != nil)
