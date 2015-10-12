@@ -135,6 +135,18 @@ opened doc and also dispatches the CSXS event
 bool MyResponderImpl::handleMyOpenEvent(ISignalMgr* signalMgr)
 {
 	CAlert::InformationAlert("hello.....Opening Document");
+	InterfacePtr<IDocumentSignalData> documentSignalData(signalMgr, UseDefaultIID());
+	ASSERT(documentSignalData != nil);
+	if (documentSignalData == nil)
+	{
+		return false;
+	}
+	UIDRef docUIDRef = documentSignalData->GetDocument();
+	InterfacePtr<IObserver> selDocObserver(docUIDRef, IID_IMYOBSERVER);
+	if (selDocObserver != nil)
+	{
+		selDocObserver->AutoAttach();
+	}
 	return true;
 }
 

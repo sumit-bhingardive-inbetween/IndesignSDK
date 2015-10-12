@@ -39,6 +39,7 @@
 #include "WidgetID.h"
 #include "BuildNumber.h"
 #include "PlugInModel_UIAttributes.h"
+#include "DocumentId.h"
 
 // Project includes:
 #include "MP1ID.h"
@@ -112,6 +113,15 @@ Class
 			IID_ISTARTUPSHUTDOWN, kmyStartUpShutdownServiceImpl,
 			// Implementation to IK2ServiceProvider to identify the service type as startup-shutdown
 			IID_IK2SERVICEPROVIDER, kLazyStartupShutdownProviderImpl,
+		}
+	},
+
+	 AddIn
+	{
+		kDocBoss,
+		kInvalidClass,
+		{
+			IID_IMYOBSERVER, kMyObserverImpl,
 		}
 	}
 }}};
