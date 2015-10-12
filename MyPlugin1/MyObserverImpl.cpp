@@ -50,7 +50,7 @@ void MyObserverImpl::AutoAttach()
 		}
 	} while (false);
 
-	/*InterfacePtr<ICSXSPlugPlugEventHandler> plugPlug(GetExecutionContextSession(), UseDefaultIID());// InterfacePtr is a iterface pointer (Template class) which is used to dispatch event by creating "plugPlug" object of ICSXSPlugPlugEventHandler type.
+	InterfacePtr<ICSXSPlugPlugEventHandler> plugPlug(GetExecutionContextSession(), UseDefaultIID());// InterfacePtr is a iterface pointer (Template class) which is used to dispatch event by creating "plugPlug" object of ICSXSPlugPlugEventHandler type.
 	PMString csxsEventStr;
 	csxsEventStr.SetCString("Hello from CPP!");
 	PMString eventData(csxsEventStr);
@@ -74,7 +74,7 @@ void MyObserverImpl::AutoAttach()
 		responseEvent.appId = kICEnigmaCode;
 	}
 
-	plugPlug->DispatchPlugPlugEvent(&responseEvent);// ICSXSPlugPlugEventHandler contains this method DispatchPlugPlugEvent.*/
+	plugPlug->DispatchPlugPlugEvent(&responseEvent);// ICSXSPlugPlugEventHandler contains this method DispatchPlugPlugEvent.
 }
 
 /*
