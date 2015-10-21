@@ -118,6 +118,10 @@ Class
 
 	 AddIn
 	{
+		//this boss class is for perticular document.
+		
+		//This boss class is used when want to set observer on total workspace.
+		//kDocWorkspaceBoss,
 		kDocBoss,
 		kInvalidClass,
 		{

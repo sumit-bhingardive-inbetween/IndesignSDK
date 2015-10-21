@@ -49,6 +49,16 @@
 #include "IDataBase.h"
 #include "ISpread.h"
 #include "IFrameType.h"
+#include "ITableSelectionSuite.h"
+#include "ICommandInterceptor.h"
+#include "ITextAttributes.h"
+#include "ITextAttrString.h"
+#include "TextEditorID.h"
+#include "TextAttrImplID.h"
+#include "ITextAttrInt16.h"
+#include "ITextAttributeSuite.h"
+#include "ISelectionUtils.h"
+#include "IXMLAttributeCommands.h"
 
 
 /* CREATE_PMINTERFACE
@@ -268,6 +278,30 @@ bool MyResponderImpl::handleMySaveEvent(ISignalMgr* signalMgr)
 				InterfacePtr<IFrameType> iFrameType(frameUIDRef, UseDefaultIID());//Got frame object.
 				PMString sFrameType = "Frame Type: ";
 				sFrameType.AppendNumber(iFrameType->IsTextFrame());
+
+				// The Below code in if code where i am trying to create attribute for a tag. 
+				//if (iFrameType->IsTextFrame()){
+				//	ISelectionManager *iSelectionManager = Utils<ISelectionUtils>()->GetActiveSelection();
+				//	InterfacePtr<ITextAttributeSuite> iTextAttrSuite(iSelectionManager, UseDefaultIID());
+				//	//InterfacePtr<ITextAttributes> iTextAttr(itemsOnP, UseDefaultIID());
+				//	InterfacePtr<ITextAttrInt16> iIntAttr(::CreateObject2<ITextAttrInt16>(kTextAttrInt16Impl));
+				//	//InterfacePtr<ITextAttributeSuite> iTextAttrSuite(frameUIDRef, UseDefaultIID());
+				//	//iIntAttr->Set(88);
+				//	iIntAttr->SetInt16(true);
+				//	if (iTextAttrSuite){
+				//		CAlert::InformationAlert("Found Text Attribute suite");
+				//	}
+				//	/*if (iTextAttr){
+				//	CAlert::InformationAlert("Found Text Attribute");
+				//	}*/
+				//	if (iIntAttr){
+				//		CAlert::InformationAlert("Found String Attribute");
+				//	}
+				//	//to add attribute in XML element.
+				//
+				//	iTextAttrSuite->ApplyAttribute(iIntAttr);
+				//}
+
 				CAlert::InformationAlert(sFrameType);
 				UIDRef pageItemRef  =  itemsOnPage.GetRef(frameIndex);//Geting page item reference ie frame reference
 				IXMLReferenceData *xmlReferenceData = Utils<IXMLUtils>()->QueryXMLReferenceData(pageItemRef);// geting referecne data
@@ -282,6 +316,25 @@ bool MyResponderImpl::handleMySaveEvent(ISignalMgr* signalMgr)
 						PMString sFrameName = "TagName... ";
 						sFrameName.Append(elementName);
 						CAlert::InformationAlert(sFrameName);
+
+						// The Below code in if condition is code for creating new xmlAttribute tag it side a XML tag. 
+					/*	Utils<IXMLAttributeCommands> attributeFacade;
+						ASSERT(attributeFacade);
+						if (!attributeFacade) {
+							break;
+						}
+						ErrorCode err = kFailure;
+						PMString attribName = "Sumit";
+						PMString attribValue = "Hello";
+							err = attributeFacade->CreateAttribute(ref, (WideString)attribName, (WideString)attribValue);
+							ASSERT(err == kSuccess);
+							if (err != kSuccess) {
+								break;
+							}*/
+				
+
+
+
 						for (int iTagElementCount = 0; iTagElementCount < element->GetChildCount(); iTagElementCount++)
 						{// Iterating through the nested in line tags ie child elements inside a frame.
 							XMLReference childRef = element->GetNthChild(iTagElementCount);

@@ -8,6 +8,10 @@
 #include "MyCSXSPluginImpl.h"
 #include "adobe/unicode.hpp" // for adobe::to_utf8
 #include "FileTypeRegistry.h"
+#include "IStyleInfo.h"
+#include "ICommandInterceptor.h"
+#include "ICommand.h"
+#include "ICommandProcessor.h"
 
 
 /* CREATE_PMINTERFACE
@@ -37,9 +41,10 @@ AutoAttach() attaches the Observer on the document
 */
 void MyObserverImpl::AutoAttach()
 {
-	CAlert::InformationAlert("hello....AutoAttach");
+	//CAlert::InformationAlert("hello....AutoAttach");
 	do
 	{
+		//Below code is for adding a observer on docuemnt Hierarchy of the document.
 		InterfacePtr<ISubject> subject(this, IID_ISUBJECT);
 		if (subject != nil)
 		{
@@ -48,6 +53,15 @@ void MyObserverImpl::AutoAttach()
 				subject->AttachObserver(ISubject::kRegularAttachment, this, IID_IHIERARCHY_DOCUMENT, IID_IMYOBSERVER);
 			}
 		}
+		////Below code is for addina a observer on style of document.
+		//InterfacePtr<ISubject> subject(this, IID_ISUBJECT);
+		//if (subject != nil)
+		//{
+		//	if (subject->IsAttached(ISubject::kRegularAttachment, this, IID_ISTYLEINFO, IID_IMYOBSERVER) == kFalse)
+		//	{
+		//		subject->AttachObserver(ISubject::kRegularAttachment, this, IID_ISTYLEINFO, IID_IMYOBSERVER);
+		//	}
+		//}
 	} while (false);
 
 	InterfacePtr<ICSXSPlugPlugEventHandler> plugPlug(GetExecutionContextSession(), UseDefaultIID());// InterfacePtr is a iterface pointer (Template class) which is used to dispatch event by creating "plugPlug" object of ICSXSPlugPlugEventHandler type.
@@ -101,5 +115,14 @@ void MyObserverImpl::AutoDetach()
 
 void MyObserverImpl::Update(const ClassID& theChange, ISubject* theSubject, const PMIID &protocol, void* changedBy)
 {
-	CAlert::InformationAlert("hello....Update");
+//	CAlert::InformationAlert("hello....UpdateEvent");
+	//The below code we are trying to create a interface pointer of the iCommandIntercepter to intercept a command.
+	/*if (theChange == kEditTextStyleCmdBoss){
+			InterfacePtr<ICommand> styleCmd((IPMUnknown*)changedBy, UseDefaultIID());
+			InterfacePtr<ICommandProcessor> cmdProc(GetExecutionContextSession()->QueryCommandProcessor());
+			InterfacePtr<ICommandInterceptor> iCommandIntercepter(cmdProc, IID_ICOMMANDINTERCEPTOR);
+			if (styleCmd && iCommandIntercepter){
+				iCommandIntercepter->InterceptProcessCommand(styleCmd);
+			}
+	}*/
 }
